@@ -5,20 +5,20 @@
 class Vjm < Formula
   desc "Vegeta-JMeter Engine - High performance load testing tool compatible with JMeter"
   homepage "https://github.com/xvlet/vjm"
-  version "0.1.17"
+  version "0.1.18"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/xvlet/vjm/releases/download/v0.1.17/vjm_darwin_amd64.tar.gz"
-      sha256 "46de315f90eaed00002ad2b867836538658189e99cb63d87c1c790d8aac82055"
+      url "https://github.com/xvlet/vjm/releases/download/v0.1.18/vjm_darwin_amd64.tar.gz"
+      sha256 "3bcb9b47d28079e6d6961fb4362943f9eb599eaeba1ffe1c9053d0a762cc3704"
 
       define_method(:install) do
         bin.install "vjm"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/xvlet/vjm/releases/download/v0.1.17/vjm_darwin_arm64.tar.gz"
-      sha256 "ae6f0b733a51da49c88b53847a45c588e6d5c7418a28b89dc238ecb23621f369"
+      url "https://github.com/xvlet/vjm/releases/download/v0.1.18/vjm_darwin_arm64.tar.gz"
+      sha256 "b11b30bf8b7970988a80be353f960c2f274276960c895682674bbdc63265d8b7"
 
       define_method(:install) do
         bin.install "vjm"
@@ -28,15 +28,15 @@ class Vjm < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/xvlet/vjm/releases/download/v0.1.17/vjm_linux_amd64.tar.gz"
-      sha256 "68f5cab1455745ed4f3742f946335ff6e027932d2a5fa89928047e547ade261e"
+      url "https://github.com/xvlet/vjm/releases/download/v0.1.18/vjm_linux_amd64.tar.gz"
+      sha256 "5fa834171dc4f2e2f5d22a62b35a8e6e00c58e7880005a41a2a34c4049d5625a"
       define_method(:install) do
         bin.install "vjm"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/xvlet/vjm/releases/download/v0.1.17/vjm_linux_arm64.tar.gz"
-      sha256 "ad88f75c6750952a67f15942892298e0c00de6b04559c19e73e4a5d645721faa"
+      url "https://github.com/xvlet/vjm/releases/download/v0.1.18/vjm_linux_arm64.tar.gz"
+      sha256 "5b248f0a400696900456c0c872085db00f54dc330abf93c97b5b41c6f89256d0"
       define_method(:install) do
         bin.install "vjm"
       end
