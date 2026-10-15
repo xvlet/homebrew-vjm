@@ -5,40 +5,44 @@
 class Vjm < Formula
   desc "Vegeta-JMeter Engine - High performance load testing tool compatible with JMeter"
   homepage "https://github.com/xvlet/vjm"
-  version "0.1.22"
+  version "0.1.23"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/xvlet/vjm/releases/download/v0.1.22/vjm_darwin_amd64.tar.gz"
-      sha256 "87d27959fb9f8cb10b8311dda44fba7c3b236aa591cdbd1ad23c100edd9ba9f5"
+      url "https://github.com/xvlet/vjm/releases/download/v0.1.23/vjm_darwin_amd64.tar.gz"
+      sha256 "3b195cc6a33ce851eec040cce419cdb06255af495445343901fbfc467098b453"
 
       define_method(:install) do
         bin.install "vjm"
+        (etc/"vjm").install "dashboard.properties" if File.exist?("dashboard.properties")
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/xvlet/vjm/releases/download/v0.1.22/vjm_darwin_arm64.tar.gz"
-      sha256 "35ff77951208d148a2b498497946de34902363e37a615cdc2f4e991ba5643e40"
+      url "https://github.com/xvlet/vjm/releases/download/v0.1.23/vjm_darwin_arm64.tar.gz"
+      sha256 "09c73c149fb62dab466eea1ef9ee095c1c52a34b9f7d20ea2baa2237e287842a"
 
       define_method(:install) do
         bin.install "vjm"
+        (etc/"vjm").install "dashboard.properties" if File.exist?("dashboard.properties")
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/xvlet/vjm/releases/download/v0.1.22/vjm_linux_amd64.tar.gz"
-      sha256 "b2bf73dfd73cb65486c698cb38de00fd94862be4568702ca4af98eadfe3b313f"
+      url "https://github.com/xvlet/vjm/releases/download/v0.1.23/vjm_linux_amd64.tar.gz"
+      sha256 "19bfd404196a1e03f9b3cbe73828c68465d08f1c969d8a4508188b452f17a03c"
       define_method(:install) do
         bin.install "vjm"
+        (etc/"vjm").install "dashboard.properties" if File.exist?("dashboard.properties")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/xvlet/vjm/releases/download/v0.1.22/vjm_linux_arm64.tar.gz"
-      sha256 "2c1b345967c9c93320b62459ea4a82c3ae7ddcb3e90e5368412e29ee8d1e39fb"
+      url "https://github.com/xvlet/vjm/releases/download/v0.1.23/vjm_linux_arm64.tar.gz"
+      sha256 "775d7fd9008d9fae5e91acaf50cdbff8c0f9f332401566a22693b17c15d2da07"
       define_method(:install) do
         bin.install "vjm"
+        (etc/"vjm").install "dashboard.properties" if File.exist?("dashboard.properties")
       end
     end
   end
