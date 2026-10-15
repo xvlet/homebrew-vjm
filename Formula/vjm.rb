@@ -10,7 +10,7 @@ class Vjm < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/xvlet/vjm/releases/download/v0.1.23/vjm_darwin_amd64.tar.gz"
-      sha256 "3b195cc6a33ce851eec040cce419cdb06255af495445343901fbfc467098b453"
+      sha256 "37be8c754965fe6ae9e7692950e9419c2cd619c3d1d319b617fe159798cac258"
 
       define_method(:install) do
         bin.install "vjm"
@@ -19,7 +19,7 @@ class Vjm < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/xvlet/vjm/releases/download/v0.1.23/vjm_darwin_arm64.tar.gz"
-      sha256 "09c73c149fb62dab466eea1ef9ee095c1c52a34b9f7d20ea2baa2237e287842a"
+      sha256 "2ecde49ccd2cff3864886bdfd731c085773aff7a9804541e5fc4dd3675c7adf1"
 
       define_method(:install) do
         bin.install "vjm"
@@ -31,7 +31,7 @@ class Vjm < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/xvlet/vjm/releases/download/v0.1.23/vjm_linux_amd64.tar.gz"
-      sha256 "19bfd404196a1e03f9b3cbe73828c68465d08f1c969d8a4508188b452f17a03c"
+      sha256 "7d6c419014730f5ea4d51c549f0c381c98d96edf987c506bfd6861da7077313a"
       define_method(:install) do
         bin.install "vjm"
         (etc/"vjm").install "dashboard.properties" if File.exist?("dashboard.properties")
@@ -39,7 +39,7 @@ class Vjm < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/xvlet/vjm/releases/download/v0.1.23/vjm_linux_arm64.tar.gz"
-      sha256 "775d7fd9008d9fae5e91acaf50cdbff8c0f9f332401566a22693b17c15d2da07"
+      sha256 "9b15967397348774cbf6f52f06b4d011e67e9257e856af94357eaa1cefcc3aa3"
       define_method(:install) do
         bin.install "vjm"
         (etc/"vjm").install "dashboard.properties" if File.exist?("dashboard.properties")
